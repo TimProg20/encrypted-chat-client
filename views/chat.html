@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/toastr/build/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../public/css/general.css">
+  </head>
+  <body class="bg-pink">
+    <div class="container-md p-5">
+      <div id="errorMessageBlock"></div>
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <div class="d-grid gap-2">
+            <button id="removeMyselfButton" class="btn btn-block btn-danger" onclick="return confirm('Are you sure?')">Delete my account</button>
+          </div>
+          <div class="card mt-3">
+            <div id="errorMessageBlock"></div>
+            <div class="card-header">
+              История диалогов
+            </div>
+            <ul id="oldUsersList" class="list-group list-group-flush" role="tablist">
+              <li class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#emptyChat" role="tab" hidden></li>
+            </ul>
+          </div>
+          <div class="card mt-3">
+            <div class="card-header">
+              Начать диалог
+            </div>
+            <ul id="newUsersList" class="list-group list-group-flush">
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 col-md-8">
+          <div class="card">
+            <div class="card-header">
+              Chat
+            </div>
+            <div id="dialogsBlock" class="card-body tab-content">
+              <div id="emptyChat" class="tab-pane fade show active" role="tabpanel">
+                Start conversations!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/toastr/toastr.js"></script>
+    <script src="../renderer.js"></script>
+    <script src="../public/js/general.js"></script>
+    <script src="../public/js/chat.js"></script>
+  </body>
+</html>

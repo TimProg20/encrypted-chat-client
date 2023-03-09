@@ -1,0 +1,20 @@
+.bg-pink {
+  background-color: #FFCCFF;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.userLink:not(.active):hover {
+  box-shadow: inset 100em 100em rgb(153, 204, 255);
+}
+
+.circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-left: .14rem;
+  margin-bottom: .14rem;
+  display: inline-block;
+}
